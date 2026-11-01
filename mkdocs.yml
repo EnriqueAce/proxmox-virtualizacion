@@ -1,0 +1,64 @@
+site_name: Virtualización de servidores con Proxmox VE
+site_description: Guía práctica para aprender virtualización de servidores con Proxmox VE, de los conceptos al laboratorio.
+site_url: https://EnriqueAce.github.io/proxmox-virtualizacion/
+repo_url: https://github.com/EnriqueAce/proxmox-virtualizacion
+repo_name: EnriqueAce/proxmox-virtualizacion
+
+theme:
+  name: material
+  language: es
+  icon:
+    logo: material/server
+  palette:
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Inicio: index.md
+  - "1. Fundamentos":
+      - "1.1 ¿Qué es la virtualización?": fundamentos/que-es.md
+      - "1.2 Tipo 1 vs Tipo 2": fundamentos/tipo1-vs-tipo2.md
+      - "1.3 KVM vs LXC": fundamentos/kvm-vs-lxc.md
+  - "2. Arquitectura":
+      - "2.1 Instalación": arquitectura/instalacion.md
+      - "2.2 Interfaz web": arquitectura/interfaz-web.md
+      - "2.3 Contenedores y VMs": arquitectura/contenedores-vms.md
+  - "3. Laboratorio":
+      - "3.1 Desafío práctico": laboratorio/desafio.md
+      - "3.2 Migración de servidor": laboratorio/migracion.md
+      - "3.3 Autoevaluación": laboratorio/autoevaluacion.md
